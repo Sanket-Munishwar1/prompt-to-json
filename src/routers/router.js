@@ -4,6 +4,7 @@ import { differentType2 } from "../controllers/different_type2.js";
 import { differentType3 } from "../controllers/different_type3.js";
 import { differentType4 } from "../controllers/different_type4.js";
 import { differentType5 } from "../controllers/different_type5.js";
+import { differentType6 } from "../controllers/different_type6.js";
 
 const router = express.Router();
 
@@ -13,5 +14,6 @@ router.post("/different-type2", differentType2);
 router.post("/different-type3", differentType3);
 router.post("/different-type4", differentType4);
 router.post("/different-type5", differentType5);
+router.post("/different-type6", differentType6);
 
 export default router;
