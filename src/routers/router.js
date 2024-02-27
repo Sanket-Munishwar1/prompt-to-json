@@ -21,11 +21,12 @@ router.post("/logos2", Logos2);
 router.post("/logos3", Logos3);
 router.post("/logos4", Logos4);
 router.post("/logos5", Logos5);
-router.post("/logos5", Logo7);
-router.post("/logos5", Logo8);
-router.post("/logos5", Logo9);
-router.post("/logos5", Logo10);
-router.post("/logos5", Logo11);
-router.post("/logos5", Logo12);
+router.post("/logos6", Logos6);
+router.post("/logo7", Logo7);
+router.post("/logo8", Logo8);
+router.post("/logo9", Logo9);
+router.post("/logo10", Logo10);
+router.post("/logo11", Logo11);
+router.post("/logo12", Logo12);
 
 export default router;
