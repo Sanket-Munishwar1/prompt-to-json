@@ -114,11 +114,6 @@ export async function sideImage3(req, res) {
 //     });
 // }
 
-// // Simple Slide
-// window.doDemo = function do7cells() {
-//     let pptx = new PptxGenJS();
-//     let slide = pptx.addSlide();
-
 //     // Title
 //     let titleOpts = {
 //         x: '5%',
