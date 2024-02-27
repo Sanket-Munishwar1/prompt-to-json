@@ -9,6 +9,7 @@ import { sideImage7 } from "../controllers/side_image7.js";
 import { sideImage8 } from "../controllers/side_image8.js";
 import { sideImage9 } from "../controllers/side_image9.js";
 import { sideImage10 } from "../controllers/side_image10.js";
+import { sideImage11 } from "../controllers/side_image11.js";
 
 const router = express.Router();
 
@@ -24,5 +25,6 @@ router.post("/side-image7",sideImage7 );
 router.post("/side-image8",sideImage8 );
 router.post("/side-image9",sideImage9 );
 router.post("/side-image10",sideImage10 );
+router.post("/side-image11",sideImage11 );
 
 export default router;
