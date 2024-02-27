@@ -22,6 +22,7 @@ import { Logo21 } from "../controllers/Logo21.js";
 import { Logo22 } from "../controllers/Logo22.js";
 import { Logo23 } from "../controllers/Logo23.js";
 import { Logo24 } from "../controllers/Logo24.js";
+import { Logo25 } from "../controllers/Logo25.js";
 
 const router = express.Router();
 
@@ -49,6 +50,7 @@ router.post("/logos21", Logo21);
 router.post("/logos22", Logo22);
 router.post("/logos23", Logo23);
 router.post("/logos24", Logo24);
+router.post("/logos25", Logo25);
 
 
 export default router;
