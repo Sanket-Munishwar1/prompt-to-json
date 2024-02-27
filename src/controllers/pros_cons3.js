@@ -7,7 +7,13 @@ function createPrompt(slideTitle, slideDesc) {
   c) 'prosTitle' – string of 2-3 words and 1 line covering title of positive or Pros part of information.
 d) 'cons' – string array of 3 points, where each point should be a detailed paragraph of 1 lines and in between 10-12 words, covering negative or cons part of specific information or examples relevant to the slide's topic. Do not leave a trailing comma after the last item in this array.
 e) 'consTitle' – string of 2-3 words and 1 line covering title of negative or cons part of information.
-The output should be only the Valid JSON object, without any extraneous text or explanation.JSON:`;
+The output should be only the Valid JSON object, without any extraneous text or explanation.JSON:.
+f)'prosimage1' - a string keyword related to the subtitle. This will be used for image search on google keep it short.
+g)'consimage1' - a string keyword related to the subtitle. This will be used for image search on google keep it short.
+h)'prosimage2' - a string keyword related to the subtitle. This will be used for image search on google keep it short.
+i)'consimage2' - a string keyword related to the subtitle. This will be used for image search on google keep it short.`;
+
+
 
   return prompt;
 }
@@ -58,8 +64,23 @@ export async function prosCons3(req, res) {
     let pros2 = parsedJson.pros[1];
     let cons1 = parsedJson.cons[0];
     let cons2 = parsedJson.cons[1];
+    let prosimage1 = parsedJson.prosimage1;
+    let consimage1 = parsedJson.consimage1;
+    let prosimage2 = parsedJson.prosimage2;
+    let consimage2 = parsedJson.consimage2;
 
-    if (presentationTitle === undefined || presentationTitle === "" || prosTitle === undefined || prosTitle === "" || consTitle === undefined || consTitle === "" || pros1 === undefined || pros1 === "" || pros2 === undefined || pros2 === "" || cons1 === undefined || cons1 === "" || cons2 === undefined || cons2 === "" ) {
+    if (presentationTitle === undefined || presentationTitle === "" 
+    || prosTitle === undefined || prosTitle === "" 
+    || consTitle === undefined || consTitle === ""
+    || pros1 === undefined || pros1 === "" 
+    || pros2 === undefined || pros2 === "" 
+    || cons1 === undefined || cons1 === "" 
+    || cons2 === undefined || cons2 === ""
+    || prosimage1 === undefined || prosimage1 === "" 
+    || consimage1 === undefined || consimage1 === "" 
+    || prosimage2 === undefined || prosimage2 === "" 
+    || consimage2 === undefined || consimage2 === ""  ) 
+    {
       return res.status(500).json({
         status: "error",
         message: "Something is missing"
@@ -77,7 +98,11 @@ export async function prosCons3(req, res) {
         parsedJson.cons[0] ? parsedJson.cons[0] : "",
         parsedJson.cons[1] ? parsedJson.cons[1] : ""
       ],
-      "consTitle": parsedJson.consTitle ? parsedJson.consTitle : ""
+      "consTitle": parsedJson.consTitle ? parsedJson.consTitle : "",
+      "prosimage1": parsedJson.prosimage1 ? parsedJson.prosimage1 : "",
+      "consimage1": parsedJson.consimage1 ? parsedJson.consimage1 : "",
+      "prosimage2": parsedJson.prosimage2 ? parsedJson.prosimage2 : "",
+      "consimage2": parsedJson.consimage2 ? parsedJson.consimage2 : ""
     }
 
     return res.status(200).json({
