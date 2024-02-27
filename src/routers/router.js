@@ -16,6 +16,7 @@ import { Logo15 } from "../controllers/Logo15.js";
 import { Logo16 } from "../controllers/Logo16.js";
 import { Logo17 } from "../controllers/Logo17.js";
 import { Logo18 } from "../controllers/Logo18.js";
+import { Logo19 } from "../controllers/Logo19.js";
 
 const router = express.Router();
 
@@ -37,5 +38,6 @@ router.post("/logos15", Logo15);
 router.post("/logos16", Logo16);
 router.post("/logos17", Logo17);
 router.post("/logos18", Logo18);
+router.post("/logos19", Logo19);
 
 export default router;
