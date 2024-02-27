@@ -3,17 +3,17 @@ import { createAskAIPayload, createOptions, callOpenAI } from "../utils/helper.j
 function createPrompt(slideTitle, slideDesc) {
   const prompt = `Craft a JSON for a presentation slide object with ${slideTitle} and slide description: ${slideDesc} should have:
   a) 'title' – a short, catchy headline summarizing the slide's content in between 4-5 words.
-  b) 'subTitle1' – give the two-three digit integer or float relavant to slide's topic.
-  c) 'subTitle2' – give the two-three digit integer or float relavant to slide's topic.
-  d) 'subTitle3' – give the two-three digit integer or float relavant to slide's topic.
-  e) 'info1' – string of 1-3 words and 1 line covering title of positive or Pros part of information.
-  f) 'info2' – string of 1-3 words and 1 line covering title of positive or Pros part of information.
-  g) 'info3' – string of 1-3 words and 1 line covering title of positive or Pros part of information.`;
+  b) 'subTitle1' – string of 1-4 words and 1 line covering title of positive or Pros part of information.
+  c) 'subTitle2' – string of 1-4 words and 1 line covering title of positive or Pros part of information.
+  d) 'subTitle3' – string of 1-4 words and 1 line covering title of positive or Pros part of information.
+  e) 'info1' – string of 1 words and 1 line covering title of positive or Pros part of information.
+  f) 'info2' – string of 1 words and 1 line covering title of positive or Pros part of information.
+  g) 'info3' – string of 1 words and 1 line covering title of positive or Pros part of information.`;
 
   return prompt;
 }
 
-export async function box3(req, res) {
+export async function differentType3(req, res) {
   try {
     let { slideTitle, slideDesc, plan } = req.body;
 
@@ -98,74 +98,73 @@ export async function box3(req, res) {
   }
 }
 
+  // let opts = {
+  //     x: "3%",
+  //     y: "3%",
+  //     w: '100%',
+  //     h: 1,
+  //     align: 'Left',
+  //     fontSize: 24,
+  //     color: '000000',
+  //     bold:true
+  // };
 
-    // let opts = {
-    //     x: "3%",
-    //     y: "3%",
-    //     w: '100%',
-    //     h: 1,
-    //     align: 'Left',
-    //     fontSize: 24,
-    //     color: '000000',
-    //     bold:true
-    // };
+  // slide.addText(
+  //     'Indian History',
+  //     opts
+  // );
 
-    // slide.addText(
-    //     'Indian History of 2023',
-    //     opts
-    // );
+  // slide.addShape(pptx.shapes.OVAL, { 
+  //     x: '6%', 
+  //     y: '25%', 
+  //     w: '23%', 
+  //     h: 2.3, 
+  //     line: { color: '0000ff', width: 1 } , 
+  //     fill: { color: 'ffffff' } 
+  // });
 
-    // slide.addShape(pptx.shapes.RECTANGLE, { 
-    //     x: '4%', 
-    //     y: '25%', 
-    //     w: '27%', 
-    //     h: 2.3, 
-    //     line: { color: '0000ff', width: 1 } , 
-    //     fill: { color: '0000ff' } 
-    // });
+  // slide.addShape(pptx.shapes.OVAL, { 
+  //     x: '39%', 
+  //     y: '25%', 
+  //     w: '23%', 
+  //     h: 2.3, 
+  //     line: { color: '0000ff', width: 1 } , 
+  //     fill: { color: 'ffffff' } 
+  // });
 
-    // slide.addShape(pptx.shapes.RECTANGLE, { 
-    //     x: '35%', 
-    //     y: '25%', 
-    //     w: '27%', 
-    //     h: 2.3, 
-    //     line: { color: '#7d7bec', width: 1 } , 
-    //     fill: { color: '#7d7bec' } 
-    // });
+  // slide.addShape(pptx.shapes.OVAL, { 
+  //     x: '72%', 
+  //     y: '25%', 
+  //     w: '23%', 
+  //     h: 2.3, 
+  //     line: { color: '0000ff', width: 1 } , 
+  //     fill: { color: 'ffffff' } 
+  // });
 
-    // slide.addShape(pptx.shapes.RECTANGLE, { 
-    //     x: '66%', 
-    //     y: '25%', 
-    //     w: '27%', 
-    //     h: 2.3, 
-    //     line: { color: '#FFFF00', width: 1 } , 
-    //     fill: { color: '#FFFF00' } 
-    // });
+  // //Subtitle
+  // slide.addText(
+  //     '1100BC',
+  //     { x: "13%", y: "35%", w: '25%', h: 1, align: 'Left', fontSize: 20, color: '0000ff',bold:true }
+  // )
+  // slide.addText(
+  //     'Indus Valley, Vedic Period',
+  //     { x: "41%", y: "35%", w: '20%', h: 1, align: 'center', fontSize: 20, color: '0000ff',bold:true }
+  // )
+  // slide.addText(
+  //     'Rigveda Composed Mahabharat era',
+  //     { x: "73%", y: "38%", w: '20%', h: 1, align: 'center', fontSize: 20, color: '0000ff',bold:true }
+  // )
 
-    // //Subtitle
-    // slide.addText(
-    //     '25',
-    //     { x: "15%", y: "28%", w: '100%', h: 1, align: 'Left', fontSize: 20, color: 'ffffff',bold:true }
-    // )
-    // slide.addText(
-    //     '150',
-    //     { x: "45%", y: "28%", w: '100%', h: 1, align: 'Left', fontSize: 20, color: '000000',bold:true }
-    // )
-    // slide.addText(
-    //     '500',
-    //     { x: "76%", y: "28%", w: '100%', h: 1, align: 'Left', fontSize: 20, color: '000000',bold:true }
-    // )
-
-    // //Info
-    // slide.addText(
-    //     'Population Growth',
-    //     { x: "10%", y: "52%", w: '100%', h: 1, align: 'Left', fontSize: 12, color: 'ffffff' }
-    // )
-    // slide.addText(
-    //     'GDP Growth%',
-    //     { x: "43%", y: "52%", w: '100%', h: 1, align: 'Left', fontSize: 12, color: '000000' }
-    // )
-    // slide.addText(
-    //     'Major Events',
-    //     { x: "74%", y: "52%", w: '100%', h: 1, align: 'Left', fontSize: 12, color: '000000' }
-    // )
+  // //Info
+  // slide.addText(
+  //     'Period',
+  //     { x: "14%", y: "62%", w: '20%', h: 1, align: 'Left', fontSize: 12, color: '000000' }
+  // )
+  // slide.addText(
+  //     'Civilization',
+  //     { x: "46%", y: "62%", w: '20%', h: 1, align: 'Left', fontSize: 12, color: '000000' }
+  // )
+  // slide.addText(
+  //     'Events',
+  //     { x: "80%", y: "62%", w: '20%', h: 1, align: 'Left', fontSize: 12, color: '000000' }
+  // )
