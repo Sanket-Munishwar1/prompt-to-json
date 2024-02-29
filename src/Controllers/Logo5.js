@@ -9,12 +9,12 @@ function createPrompt(slideTitle, slideDesc) {
   e) 'info4' – a short, string of 12 to 16 words refering and summerizing to the subtitle4.
   f) 'info5' – a short, string of 12 to 16 words refering and summerizing to the subtitle5.
   g) 'info6' – a short, string of 12 to 16 words refering and summerizing to the subtitle6  
-  i) 'logo1' – Avoiding non-alphabetic characters, please use '>' to denote them.
-  j) 'logo2' – Avoiding non-alphabetic characters, please use '>' to denote them.
-  k) 'logo3' – Avoiding non-alphabetic characters, please use '>' to denote them.
-  l) 'logo4' – Avoiding non-alphabetic characters, please use '>' to denote them.
-  m) 'logo5' – Avoiding non-alphabetic characters, please use '>' to denote them.
-  n) 'logo6' – Avoiding non-alphabetic characters, please use '>' to denote them.
+  i) 'logo1' – non-alphabetic characters, please use '>' to denote them.
+  j) 'logo2' – non-alphabetic characters, please use '>' to denote them.
+  k) 'logo3' – non-alphabetic characters, please use '>' to denote them.
+  l) 'logo4' – non-alphabetic characters, please use '>' to denote them.
+  m) 'logo5' – non-alphabetic characters, please use '>' to denote them.
+  n) 'logo6' – non-alphabetic characters, please use '>' to denote them.
 
 The output should be only the Valid JSON object, without any extraneous text or explanation.JSON:`;
 
